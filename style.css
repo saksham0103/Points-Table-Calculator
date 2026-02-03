@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* ===== THEME VARIABLES ===== */
+:root{
+    --bg:#f3f6fb;
+    --panel:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --accent:#2563eb;
+}
+
+body.dark{
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --text:#f1f5f9;
+    --muted:#94a3b8;
+    --border:#334155;
+    --accent:#38bdf8;
+}
+
+/* ===== GLOBAL ===== */
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:background .3s ease, color .3s ease;
+}
+
+h1,h2,h3,h4,h5{
+    color:var(--text);
+}
+
+/* ===== CENTER SETUP ===== */
+.app-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.setup-panel{
+    width:100%;
+    max-width:460px;
+    padding:40px;
+    border-radius:16px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== PANELS ===== */
+.panel{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:24px;
+    margin-bottom:20px;
+}
+
+/* ===== HEADER ===== */
+.game-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+/* ===== INPUTS ===== */
+input{
+    background:var(--panel) !important;
+    color:var(--text) !important;
+    border:1px solid var(--border) !important;
+    border-radius:8px !important;
+    padding:10px !important;
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--accent) !important;
+    box-shadow:0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* ===== LABELS ===== */
+label{
+    font-weight:600;
+    color:var(--text);
+    margin-bottom:6px;
+}
+
+/* ===== BUTTON ROW ===== */
+.btn-row{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* ===== TABLES ===== */
+table{
+    width:100%;
+    background:var(--panel);
+    color:var(--text);
+    border-collapse:collapse;
+}
+
+table th{
+    background:var(--bg);
+    color:var(--text);
+    font-weight:600;
+}
+
+table td, table th{
+    border:1px solid var(--border);
+    padding:12px;
+    text-align:center;
+}
+
+/* ===== AVATARS ===== */
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:6px;
+    border:2px solid var(--border);
+}
+
+.avatar-sm{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-right:6px;
+    border:1px solid var(--border);
+}
+
+/* ===== THEME BUTTON ===== */
+.theme-toggle{
+    padding:6px 14px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    background:var(--panel);
+    color:var(--text);
+    font-weight:600;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.theme-toggle:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+}
+
+/* ===== MODAL ===== */
+.winner-panel, .modal-content{
+    background:var(--panel) !important;
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:14px;
+}
+
+/* ===== HISTORY ITEMS ===== */
+.history-item{
+    padding:8px 0;
+    color:var(--text);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .btn-row{
+        flex-direction:column;
+    }
+}

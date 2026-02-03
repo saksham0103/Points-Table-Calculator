@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoreboard Game</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-app">
+
+<div class="app-center">
+    <div class="setup-panel">
+        <h1 class="app-title">Scoreboard Game</h1>
+        <p class="app-sub">Lowest total score wins the match</p>
+
+        <input type="number" id="numPlayers" class="form-control mb-3" placeholder="Number of Players (min 2)">
+        <input type="number" id="numRounds" class="form-control mb-2" placeholder="Number of Rounds">
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="infiniteRounds">
+            <label class="form-check-label">Infinite Rounds</label>
+        </div>
+
+        <button class="btn btn-primary w-100" onclick="startGame()">Start Game</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
